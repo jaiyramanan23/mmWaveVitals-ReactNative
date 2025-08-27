@@ -1,0 +1,82 @@
+{
+  "expo": {
+    "name": "mmWaveVitals",
+    "slug": "mmWaveVitals",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "mmwavevitals",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": false,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jaiyramanan.mmwavevitals",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "This app needs access to your microphone to record heart sounds for analysis.",
+        "NSLocationWhenInUseUsageDescription": "This app may use location for device connectivity features.",
+        "NSBluetoothAlwaysUsageDescription": "This app uses Bluetooth to connect to medical devices.",
+        "NSBluetoothPeripheralUsageDescription": "This app uses Bluetooth to connect to medical devices."
+      }
+    },
+    "android": {
+      "package": "com.jaiyramanan.mmwavevitals",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "usesCleartextTraffic": true,
+      "networkSecurityConfig": "./network_security_config.xml",
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "WAKE_LOCK",
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE",
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN",
+        "BLUETOOTH_CONNECT",
+        "BLUETOOTH_SCAN",
+        "BLUETOOTH_ADVERTISE"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow mmWaveVitals to access your microphone for heart sound recording."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "516fc5e9-b04e-45bd-8647-1e7e218f11da"
+      }
+    }
+  }
+}
